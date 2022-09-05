@@ -60,7 +60,7 @@
   <section class="gallery-container">
        <h2>GALERÍA</h2>
        <div class="gallery " >
-            <div type="button" class="imgs" >
+            <div type="button" class="imgs" onclick="openmodal()">
                 <img src="/imag/foto-1.jpg" alt="" >
             </div>
             <div type="button" class="imgs" >
@@ -72,11 +72,16 @@
             <div type="button" class="imgs" >
                 <img src="/imag/foto-4.jpg" alt="">
             </div>
-            
-            
-       </div>
-       <a href="#"><div class="booton"> VER TODAS</div></a>
+      </div> 
+      <a href="#"><div class="booton"> VER TODAS</div></a>
+      
     </section>
+    <div class="modal1" id="modal1" >
+      <div class="img-modal" >
+        <div class="icon-close" onclick="closemodal()"><span>X</span></div>
+        <img src="/imag/foto-1.jpg" alt="">
+      </div>
+    </div>
     
     <script src="/js/bootstrap.min.js"></script>
     <script src="jsMain.js"></script>

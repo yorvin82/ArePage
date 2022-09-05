@@ -7,6 +7,9 @@
 img{
     width: 100%;
 }
+body{
+  position: relative;
+}
 
 .paleta{
     background: #99a88c;
@@ -37,7 +40,7 @@ h2{font-family: Italiana; font-size: 2em;}
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(121, 90, 76, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 1;
 }
 .infoHeader{
@@ -47,6 +50,9 @@ h2{font-family: Italiana; font-size: 2em;}
     color: white;
     text-shadow: 3px 3px 3px black;
     z-index: 2;
+}
+.infoHeader p{
+  margin: 0;
 }
 .conten-nav{
     width: 100%;
@@ -67,6 +73,16 @@ h2{font-family: Italiana; font-size: 2em;}
     padding: 0;
     list-style: none;
 }
+@media screen and (max-width: 600px) {
+  .div-nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+  }
+
+}
+  
 .div-nav ul li{
     display: inline-block;
 }
@@ -105,8 +121,16 @@ h2{font-family: Italiana; font-size: 2em;}
   margin-top: 30px;
   overflow: hidde
 }
-@media screen {
-  
+@media screen and (max-width: 1280px){
+  .gallery{
+    display: grid;
+    grid-template-columns: 50% 2fr;
+    flex-wrap: nowrap;
+    width: 50%;
+    height: auto;
+    margin-top: 30px;
+    overflow: hidden;
+  }
 }
 .imgs img{
   width: 100%;
@@ -145,3 +169,42 @@ body a{
   overflow: hidden;
 }
 
+/* estilos del modal */
+.modal1{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+}
+.img-modal{
+  
+  position: relative;
+  top: 0px;
+  width: 400px;
+  height: auto;
+  border: 4px solid #fff;
+}
+.icon-close{
+  margin: 0;
+  padding: 0;
+  text-align: center ;
+  position: absolute;
+  z-index: 31;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+.icon-close span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background-color: rgba(255,255,255,0.5);
+  
+}
