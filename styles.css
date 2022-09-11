@@ -24,7 +24,8 @@ body{
 @font-face { font-family: Italiana; src: url(font/Italiana-Regular.ttf);}
 
 p{font-family: Ralewey; font-size: 1.3rem;}
-h2{font-family: Italiana; font-size: 2em;}
+h2{font-family: Ralewey; font-size: 2em;}
+h1{font-family: Ralewey; font-size: 3em;}
 
 .center{
   width: 100%;
@@ -33,16 +34,10 @@ h2{font-family: Italiana; font-size: 2em;}
 }
 .content-header{
     position: relative;
+    object-fit: cover;
+    filter: brightness(70%);
 }
 
-
-.capa{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
-}
 .infoHeader{
     position: absolute;
     top: 45%;
@@ -58,14 +53,15 @@ h2{font-family: Italiana; font-size: 2em;}
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 40;
 }
 
 .div-nav{
     position: absolute;
     top: 0;
-    z-index: 3;
-    background-color: rgba(0,0,0, 0.2);
+    background-color: #9e2a2b;
     border-radius: 0px 0px 10px 10px;
+    
 }
 
 .div-nav ul{
@@ -91,9 +87,12 @@ h2{font-family: Italiana; font-size: 2em;}
     display: block;
     padding: 0.5rem  1rem ;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8);
     font-family: Ralewey;
-    
+
+}
+.div-nav ul li a:hover{
+  color: rgba(255, 255, 255, 1);
 }
 
 
@@ -114,12 +113,12 @@ h2{font-family: Italiana; font-size: 2em;}
 }
 .gallery{
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   flex-wrap: nowrap;
   width: 80%;
   height: auto;
   margin-top: 30px;
-  overflow: hidde
+  overflow: hidde;
 }
 @media screen and (max-width: 1280px){
   .gallery{
@@ -132,10 +131,12 @@ h2{font-family: Italiana; font-size: 2em;}
     overflow: hidden;
   }
 }
+
 .imgs img{
   width: 100%;
   height: 100%;
   border: 3px solid rgba(0, 0, 0, 0.8);
+  object-fit: cover;
   
 }
 .imgs img:hover{
@@ -171,33 +172,35 @@ body a{
 
 /* estilos del modal */
 .modal1{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
   display: none;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100vh;
   background-color: rgba(0,0,0,0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 30;
-}
-.img-modal{
+  backdrop-filter: blur(4px);
   
-  position: relative;
-  top: 0px;
-  width: 400px;
-  height: auto;
-  border: 4px solid #fff;
+}
+.img-modal {
+  display: flex;
+  margin: 0px auto;
+  width: 50%;
+  height: 70%;
+  object-fit: contain;
+  
+}
+.img-modal img{
+  object-fit: contain;
 }
 .icon-close{
-  margin: 0;
-  padding: 0;
-  text-align: center ;
   position: absolute;
   z-index: 31;
-  top: 5px;
-  right: 5px;
+  top: 30px;
+  right: 30px;
   cursor: pointer;
 }
 .icon-close span{
