@@ -19,6 +19,7 @@ body{
     background: #e09f3e;
     background: #9e2a2b;
     background: #540b0e;
+    background: #6d3819;
 }
 @font-face { font-family: Ralewey; src: url(font/Raleway-VariableFont_wght.ttf);}
 @font-face { font-family: Italiana; src: url(font/Italiana-Regular.ttf);}
@@ -35,6 +36,9 @@ h1{font-family: Ralewey; font-size: 3em;}
 .content-header{
     position: relative;
     object-fit: cover;
+}
+.content-header .carousel-indicators{
+  margin-bottom: 0;
 }
 .carousel-inner{
   filter: brightness(60%);
@@ -69,13 +73,22 @@ h1{font-family: Ralewey; font-size: 3em;}
     padding: 0;
     list-style: none;
 }
-
-@media screen and (max-width: 600px) {
+/*------------responsive div nav------------*/
+@media screen and (max-width: 768px) {
   .div-nav ul{
     margin: 0;
     padding: 0;
     list-style: none;
     font-size: 12px;
+  }
+  .div-nav{
+    position: static;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 0px 0px 10px 10px;
+  }
+  .infoHeader{
+    top: 35%;
   }
 
 }
@@ -121,17 +134,6 @@ h1{font-family: Ralewey; font-size: 3em;}
   margin-top: 10px;
   overflow: hidden;
 }
-@media screen and (max-width: 1280px){
-  .gallery{
-    display: grid;
-    grid-template-columns: 50% 2fr;
-    flex-wrap: nowrap;
-    width: 70%;
-    height: auto;
-    margin-top: 20px;
-    overflow: hidden;
-  }
-}
 
 .imgs img{
   width: 100%;
@@ -145,29 +147,57 @@ h1{font-family: Ralewey; font-size: 3em;}
   cursor: pointer;
   
 }
-.booton{
-  margin: 40px 0;
-  width: 150px;
+.button_gallery{
+  border: none;
+  border-radius: 2px;
+  color: rgb(0, 0, 0);
   padding: 10px 20px;
-  background-color: #e09f3e;
-  border-radius: 5px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 0;
   cursor: pointer;
+  background-color: #fff9d6;
 }
-.booton:hover{
- padding: 10px;
- width: 170px;
- color :white;
-}
-.firs_booton{
- text-decoration: none;
- color: white;
+.button_gallery:hover{
+    background-color: #cec696;
 }
 
 .carousel{
   max-height: 500px;
   overflow: hidden;
 }
+
+/* responsive de galeria*/
+@media screen and (max-width: 768px){
+  .gallery{
+    display: grid;
+    grid-template-columns: 50% 2fr;
+    flex-wrap: nowrap;
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  .button_gallery{
+    border: none;
+    border-radius: 2px;
+    color: rgb(0, 0, 0);
+    padding: 6px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 0;
+    cursor: pointer;
+    background-color: #fff9d6;
+  }
+  .button_gallery:hover{
+      background-color: #cec696;
+  }
+}
+/*------------------------*/
 
 /* estilos del modal */
 .modal1{
@@ -211,7 +241,7 @@ h1{font-family: Ralewey; font-size: 3em;}
   
 }
 
-/* Sección de informacion segunda parte*/
+/* Estilos de Sección more*/
 
 .content_more{
   display: flex;
@@ -220,7 +250,6 @@ h1{font-family: Ralewey; font-size: 3em;}
 }
 .img_more{
   width: 30%;
-  height: 100%;
 }
 .info_more{
   display: flex;
@@ -229,23 +258,26 @@ h1{font-family: Ralewey; font-size: 3em;}
   justify-content: center;
   align-items: center;
   width: 50%;
+  text-align: center;
 }
 .content_more p{
   font-size: 1rem;
 }
 .content_more h2{
   font-size: 2rem;
+  margin: 20px 0;
 }
 
 .button_more{
   border: none;
+  border-radius: 2px;
   color: white;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 10px 0;
   cursor: pointer;
   background-color: #9e2a2b;
 }
@@ -253,7 +285,11 @@ h1{font-family: Ralewey; font-size: 3em;}
     background-color: #641b1c;
 }
 
+/*----------Responsive secction more-----------*/
 @media screen and (max-width: 768px) {
+  .img_more{
+    width: 40%;
+  }
   .content_more h2{
     font-size: 1.5rem;
   }
@@ -263,15 +299,20 @@ h1{font-family: Ralewey; font-size: 3em;}
   .button_more{
     border: none;
     color: white;
-    padding: 5px 10px;
+    padding: 6px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 12px;
-    margin: 4px 2px;
+    font-size: 16px;
+    margin: 20px 0px;
     cursor: pointer;
     background-color: #9e2a2b;
   }
+  .button_more:hover{
+    background-color: #641b1c;
+  }
+  .content_more h2{font-size: 1rem;  }
+  .content_more p{font-size: 0.5rem;  }
   
 }
 
