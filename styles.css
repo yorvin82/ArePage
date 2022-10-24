@@ -37,7 +37,7 @@ h1{font-family: Ralewey; font-size: 3em;}
     object-fit: cover;
 }
 .carousel-inner{
-  filter: brightness(50%);
+  filter: brightness(60%);
 }
 .infoHeader{
     position: absolute;
@@ -60,7 +60,7 @@ h1{font-family: Ralewey; font-size: 3em;}
 .div-nav{
     position: absolute;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 0px 0px 10px 10px;
 }
 
@@ -88,7 +88,7 @@ h1{font-family: Ralewey; font-size: 3em;}
     display: block;
     padding: 0.5rem  1rem ;
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.8);
+    color: #000;
     font-family: Ralewey;
 
 }
@@ -220,6 +220,7 @@ h1{font-family: Ralewey; font-size: 3em;}
 }
 .img_more{
   width: 30%;
+  height: 100%;
 }
 .info_more{
   display: flex;
@@ -228,6 +229,12 @@ h1{font-family: Ralewey; font-size: 3em;}
   justify-content: center;
   align-items: center;
   width: 50%;
+}
+.content_more p{
+  font-size: 1rem;
+}
+.content_more h2{
+  font-size: 2rem;
 }
 
 .button_more{
@@ -243,5 +250,49 @@ h1{font-family: Ralewey; font-size: 3em;}
   background-color: #9e2a2b;
 }
 .button_more:hover{
-    background-color: #7d2224;
+    background-color: #641b1c;
+}
+
+@media screen and (max-width: 768px) {
+  .content_more h2{
+    font-size: 1.5rem;
+  }
+  .content_more p{
+    font-size: 0.9rem;
+  }
+  .button_more{
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #9e2a2b;
+  }
+  
+}
+
+/* Sección de customers*/
+
+.content_customers{
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.img_customers{
+  width: 20%;
+  margin: 10px 0;
+}
+.content_customers h2{
+  text-align: center;
+  padding: 20px 0;
+}
+
+.img_brand{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
