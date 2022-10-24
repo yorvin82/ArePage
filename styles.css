@@ -110,7 +110,7 @@ h1{font-family: Ralewey; font-size: 3em;}
   color: #fff;
 }
 .gallery-container h2{
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .gallery{
   display: grid;
@@ -118,17 +118,17 @@ h1{font-family: Ralewey; font-size: 3em;}
   flex-wrap: nowrap;
   width: 80%;
   height: auto;
-  margin-top: 30px;
-  overflow: hidde;
+  margin-top: 10px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1280px){
   .gallery{
     display: grid;
     grid-template-columns: 50% 2fr;
     flex-wrap: nowrap;
-    width: 50%;
+    width: 70%;
     height: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     overflow: hidden;
   }
 }
