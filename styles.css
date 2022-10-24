@@ -35,9 +35,10 @@ h1{font-family: Ralewey; font-size: 3em;}
 .content-header{
     position: relative;
     object-fit: cover;
-    filter: brightness(70%);
 }
-
+.carousel-inner{
+  filter: brightness(50%);
+}
 .infoHeader{
     position: absolute;
     top: 45%;
@@ -59,9 +60,8 @@ h1{font-family: Ralewey; font-size: 3em;}
 .div-nav{
     position: absolute;
     top: 0;
-    background-color: #9e2a2b;
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 0px 0px 10px 10px;
-    
 }
 
 .div-nav ul{
@@ -69,6 +69,7 @@ h1{font-family: Ralewey; font-size: 3em;}
     padding: 0;
     list-style: none;
 }
+
 @media screen and (max-width: 600px) {
   .div-nav ul{
     margin: 0;
@@ -87,7 +88,7 @@ h1{font-family: Ralewey; font-size: 3em;}
     display: block;
     padding: 0.5rem  1rem ;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
     font-family: Ralewey;
 
 }
@@ -149,7 +150,7 @@ h1{font-family: Ralewey; font-size: 3em;}
   width: 150px;
   padding: 10px 20px;
   background-color: #e09f3e;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
   cursor: pointer;
 }
@@ -158,11 +159,9 @@ h1{font-family: Ralewey; font-size: 3em;}
  width: 170px;
  color :white;
 }
-body a{
-  color: #4f4f4f;
-  text-decoration: none;
-  font-weight: bold;
-  
+.firs_booton{
+ text-decoration: none;
+ color: white;
 }
 
 .carousel{
@@ -210,4 +209,39 @@ body a{
   padding: 8px;
   background-color: rgba(255,255,255,0.5);
   
+}
+
+/* Sección de informacion segunda parte*/
+
+.content_more{
+  display: flex;
+  width: 100%;
+  background-color: #fff9d6;
+}
+.img_more{
+  width: 30%;
+}
+.info_more{
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.button_more{
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #9e2a2b;
+}
+.button_more:hover{
+    background-color: #7d2224;
 }
